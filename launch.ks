@@ -64,6 +64,7 @@ LOCAL FUNCTION waitForWindow {
 	PRINT "Stage: " + stag AT (1,2).
 	PRINT "LAN:   " + SHIP:OBT:LAN AT (1,3).
 	PRINT "Targ:  " + lLAN AT (1,4).
+	LOCK THROTTLE TO 1.
 	IF (NOT window) OR (ABS(SHIP:OBT:LAN - lLAN) <= LTol OR ABS(SHIP:OBT:LAN - lLAN) >= 360 - LTol) {
 		nextState().
 	}
